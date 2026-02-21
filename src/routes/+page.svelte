@@ -1,28 +1,19 @@
 <script lang="ts">
-    import Header from '$lib/components/header.svelte';
+    import * as m from '$lib/paraglide/messages';
 </script>
 
-<main class="start-page">
-    <Header subtitle="improve your playing on your instrument" showSeparator={false} />
-    <div class="tools">
-        <ul>
-            <li class="card">
-                <a href="/tune">
-                    <h2>Tune</h2>
-                    <p class="description">improve your intonation</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-</main>
+<div class="tools">
+    <ul>
+        <li class="card">
+            <a href="/tune">
+                <h2>{m.tune_name()}</h2>
+                <p class="description">{m.tune_description()}</p>
+            </a>
+        </li>
+    </ul>
+</div>
 
 <style>
-
-    main {
-        padding: var(--spacing-xxl);
-        display: flex;
-        flex-direction: column;
-    }
 
     .tools {
         padding: var(--spacing-xxl);

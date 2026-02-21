@@ -1,5 +1,6 @@
 <script lang="ts">
     import instroveLogo from '$lib/assets/instrove.svg?raw';
+    import * as m from '$lib/paraglide/messages';
 
     let { subtitle, showSeparator = true } = $props();
 </script>
@@ -11,7 +12,7 @@
                 {@html instroveLogo}
             </div>
             <h1>
-                Instrove
+                {m.app_name()}
                 {#if showSeparator}
                     <span class="separator">&nbsp;|&nbsp;</span>
                 {/if}

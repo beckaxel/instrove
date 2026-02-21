@@ -1,12 +1,26 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
-	import { locales, localizeHref } from '$lib/paraglide/runtime';
+	import Header from '$lib/components/header.svelte';
+	import { locales, localizeHref, routeStrategies } from '$lib/paraglide/runtime';
+	import * as m from "$lib/paraglide/messages";
+
 
 	let { children } = $props();
+	let isRoot = $derived(page.route.id === '/');
+	let subtitle = $derived(isRoot 
+		? m.app_subtitle()
+		: page.route.id?.split('/')[1] ?? '');
 </script>
 
-{@render children()}
+<svelte:head>
+  <title>{m.app_name()}{subtitle ? ' - ' + subtitle : ''}</title>
+</svelte:head>
+
+<main class="{isRoot ? 'root' : undefined}">
+	<Header subtitle={subtitle} showSeparator={!isRoot} />
+	{@render children()}
+</main>
 
 {#if browser}
 	<div style="display:none">

@@ -1,9 +1,9 @@
 <script>
-	import Header from "$lib/components/header.svelte";
+
 </script>
 
-<Header subtitle="tune" />
+<div>content</div>
 
 <style>
-    
+
 </style>
