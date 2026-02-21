@@ -1,4 +1,9 @@
-<h1>
-    Instrove
-    <span class="subtitle">tune</span>
-</h1>
+<script>
+	import Header from "$lib/components/header.svelte";
+</script>
+
+<Header subtitle="tune" />
+
+<style>
+    
+</style>

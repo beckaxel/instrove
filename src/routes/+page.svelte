@@ -1,18 +1,12 @@
 <script lang="ts">
-  import instroveLogo from '$lib/assets/instrove.svg?raw';
+    import Header from '$lib/components/header.svelte';
 </script>
 
-<main>
-    <div class="hero">{@html instroveLogo}</div>
-    <div class="brand">
-        <h1>
-            Instrove
-            <span class="subtitle">improve your playing on your instrument</span>
-        </h1>
-    </div>
+<main class="start-page">
+    <Header subtitle="improve your playing on your instrument" showSeparator={false} />
     <div class="tools">
         <ul>
-            <li>
+            <li class="card">
                 <a href="/tune">
                     <h2>Tune</h2>
                     <p class="description">improve your intonation</p>
@@ -23,9 +17,35 @@
 </main>
 
 <style>
-  .hero {
-    max-width: 200px;
-    height: auto;
-  }
+
+    main {
+        padding: var(--spacing-xxl);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tools {
+        padding: var(--spacing-xxl);
+    }
+
+    .tools > ul {
+        display: flex;
+        margin: var(--spacing-xxxl);
+    }
+
+    li.card {
+        cursor: pointer;
+        border: var(--spacing-xxs) solid var(--text-color);
+        border-radius: var(--border-radius-m);
+        padding: var(--spacing-xxl);
+    }
+
+    li.card:hover {
+        border-color: var(--primary-color);
+    }
+
+    li.card a {
+        cursor: pointer;
+    }
 </style>
 
