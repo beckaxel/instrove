@@ -3,7 +3,7 @@ export type TickCallback = () => void | Promise<void>
 export class Ticker {
   
     private nextTick: number | null;
-    private timeoutId: number | null;
+    private timeoutId: number | NodeJS.Timeout | null;
 
     constructor(
         public readonly interval: number, 
@@ -42,7 +42,7 @@ export class Ticker {
             return;
 
         const delay = Math.max(0, this.nextTick - performance.now());
-        this.timeoutId = window.setTimeout(async () => {
+        this.timeoutId = setTimeout(async () => {
             if (this.nextTick === null) 
                 return;
 
