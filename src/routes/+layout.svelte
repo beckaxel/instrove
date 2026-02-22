@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
-	import Header from '$lib/components/header.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import { locales, localizeHref, routeStrategies } from '$lib/paraglide/runtime';
 	import * as m from "$lib/paraglide/messages";
 
