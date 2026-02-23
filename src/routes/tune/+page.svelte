@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
+	import MicrophoneSelect from "$lib/components/MicrophoneSelect.svelte";
 
+    let microphone = $state<string>();
 </script>
 
-<div>content</div>
+<MicrophoneSelect onchange={(m: string) => microphone = m} />
 
 <style>
 

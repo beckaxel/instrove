@@ -5,7 +5,6 @@
 	import { locales, localizeHref, routeStrategies } from '$lib/paraglide/runtime';
 	import * as m from "$lib/paraglide/messages";
 
-
 	let { children } = $props();
 	let isRoot = $derived(page.route.id === '/');
 	let subtitle = $derived(isRoot 

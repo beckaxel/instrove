@@ -36,14 +36,14 @@
 
     --primary-font: var(--font-face-sans);
 }
-/*
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: var(--color-white);
     --background-color: var(--color-black);
   }
 }
-*/
+
 *, *::before, *::after {
     box-sizing: border-box;
     overflow: hidden;

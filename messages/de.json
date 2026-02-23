@@ -3,5 +3,6 @@
 	"app_name": "instrove",
 	"app_subtitle": "Verbessere dein Spiel auf deinem Instrument",
 	"tune_name": "tune",
-	"tune_description": "Verbessere deine Intonation"
+	"tune_description": "Verbessere deine Intonation",
+	"microphone_not_found": "Kein Microphon vorhanden"
 }
