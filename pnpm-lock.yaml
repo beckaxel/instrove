@@ -26,6 +26,9 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^6.2.4
         version: 6.2.4(svelte@5.53.0)(vite@7.3.1(@types/node@24.10.13))
+      '@types/audioworklet':
+        specifier: ^0.0.96
+        version: 0.0.96
       '@types/node':
         specifier: ^24
         version: 24.10.13
@@ -518,6 +521,9 @@ packages:
     engines: {node: '>=16'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
+
+  '@types/audioworklet@0.0.96':
+    resolution: {integrity: sha512-tnuTvNa8ZlSXfcfdi50TcOB8bXCHaU1B8sqJ9uF8AfCvpIqwu9iheqHXRHzjt13J3YqX/83WUtJP7vfXReyS4w==}
 
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
@@ -1759,6 +1765,8 @@ snapshots:
   '@testing-library/svelte-core@1.0.0(svelte@5.53.0)':
     dependencies:
       svelte: 5.53.0
+
+  '@types/audioworklet@0.0.96': {}
 
   '@types/chai@5.2.3':
     dependencies:

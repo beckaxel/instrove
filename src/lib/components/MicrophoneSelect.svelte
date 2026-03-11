@@ -40,7 +40,7 @@
     {#if microphones.length === 0}
         <option disabled>{m.microphone_not_found}</option>
     {:else}
-        {#each microphones as microphone}
+        {#each microphones as microphone (microphone.deviceId)}
             <option value="{microphone}">{microphone.label}</option>
         {/each}
     {/if}
